@@ -1,7 +1,8 @@
+import java.util.List;
 public class ArrayProcessor {
-    public double maxNumber(double[] array) {
-        double max = array[0];
-        for (double num : array) {
+    public Integer maxNumber(List<Integer> array) {
+        Integer max = array.getFirst();
+        for (Integer num : array) {
             if (num > max) {
                 max = num;
             }
@@ -9,9 +10,9 @@ public class ArrayProcessor {
         return max;
     }
 
-    public double minNumber(double[] array) {
-        double min = array[0];
-        for (double num : array) {
+    public Integer minNumber(List<Integer> array) {
+        Integer min = array.getFirst();
+        for (Integer num : array) {
             if (num < min) {
                 min = num;
             }
@@ -19,17 +20,17 @@ public class ArrayProcessor {
         return min;
     }
 
-    public double maxSum(double[] array) {
-        double sum = 0;
-        for (double num : array) {
+    public Integer maxSum(List<Integer> array) {
+        Integer sum = 0;
+        for (Integer num : array) {
             sum += num;
         }
         return sum-minNumber(array);
     }
 
-    public double minSum(double[] array) {
-        double sum = 0;
-        for (double num : array) {
+    public Integer minSum(List<Integer> array) {
+        Integer sum = 0;
+        for (Integer num : array) {
             sum += num;
         }
         return sum-maxNumber(array);
